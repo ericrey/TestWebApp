@@ -13,7 +13,7 @@
 //display table
 echo "<table border= '1'";
 $sql= "SELECT * FROM [dbo].[restaurant]";
-$getResults= sqlsrv_query($conn, $tsql);
+$getResults= sqlsrv_query($conn, $sql);
 if ($getResult == FALSE)
 {
   die(sqlsrv_errors());
