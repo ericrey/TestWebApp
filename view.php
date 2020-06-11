@@ -15,7 +15,8 @@
 $getResults= sqlsrv_query($conn, $tsql);
 if ($getResults == FALSE)  {             
   die(sqlsrv_errors());   
-}                          
+}
+echo "<table>";
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))   
 {             
   echo "<tr>";             
@@ -25,6 +26,7 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
   echo "<td>". $row['restaurant_phone'] . "</td>";             
   echo "</tr>";         
 }        
+echo "</table>";
 sqlsrv_free_stmt($getResults);
 
 ?>
